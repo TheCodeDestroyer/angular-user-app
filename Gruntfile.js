@@ -45,9 +45,9 @@ module.exports = function(grunt) {
             }
         },
         sass: {
-            compile: {
+            dist: {
                 files: {
-                    'app/css/bootstrap.css': 'lib/bootstrap-sass/bootstrap.scss'
+                    'app/css/bootstrap.css': 'app/lib/bootstrap-sass/lib/bootstrap.scss'
                 }
             }
         }
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-ng-annotate');
 
 };
