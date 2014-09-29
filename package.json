@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/TheCodeDestroyer/angular-user-app/issues"
   },
-  "homepage": "https://github.com/TheCodeDestroyer/angular-user-app"
+  "homepage": "https://github.com/TheCodeDestroyer/angular-user-app",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ng-annotate": "^0.4.0",
+    "grunt-ngmin": "0.0.3",
+    "grunt-sass": "^0.14.2"
+  }
 }
