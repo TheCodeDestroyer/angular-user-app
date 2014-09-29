@@ -32,7 +32,7 @@ module.exports = function(grunt) {
             ],
             tasks: ['jshint']
         },
-        ngmin: {
+        ngannotate: {
             controllers: {
                 src: ['test/src/controllers/one.js'],
                 dest: 'test/generated/controllers/one.js'
@@ -47,15 +47,7 @@ module.exports = function(grunt) {
         sass: {
             compile: {
                 files: {
-                    'public/css/bootstrap.css': 'public/css/bootstrap/bootstrap.scss'
-                }
-            },
-            includePaths: {
-                options: {
-                    includePaths: ['./test/fixtures']
-                },
-                files: {
-                    'test/tmp/include-paths.css': 'test/fixtures/include-paths.scss'
+                    'app/css/bootstrap.css': 'lib/bootstrap-sass/bootstrap.scss'
                 }
             }
         }
@@ -65,6 +57,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-ngmin');
+    grunt.loadNpmTasks('grunt-ng-annotate');
 
 };
