@@ -1,4 +1,4 @@
-angular.module('aua.controllers').controller('indMainCtrl', ['$translate', function($translate) {
+angular.module('aua.controllers').controller('indMainCtrl', ['$scope', 'indUserSvc', function($scope, indUserSvc) {
     'use strict';
 
     var vm = this;
@@ -8,29 +8,23 @@ angular.module('aua.controllers').controller('indMainCtrl', ['$translate', funct
         { sref: 'index.chart', title: 'Chart' }
     ];
 
+    vm.gridData = [];
+
+    indUserSvc.getUsers().then(function (response) {
+        vm.gridData = response.data;
+    });
+
     vm.gridConfig = {
-        datatype: "local",
+        datatype: 'local',
         height: 250,
-        colNames:['Id','Full Name', 'Age', 'Sex','Possibility to die'],
+        colNames:['Id','Full Name', 'Age', 'Sex','Bad luck meter'],
         colModel:[
-            {name:'id', width: 60, sorttype: "int"},
-            {name:'name', width: 150},
-            {name:'age', width: 80, align: "right", sorttype: "int"},
-            {name:'sex', width: 80, sorttype: "float"},
-            {name:'incidentPossibility', width: 50, sorttype: "int"}
+            {name:'id', width: 60, sorttype: 'int', hidden: true},
+            {name:'name', width: 250, align: 'center'},
+            {name:'age', width: 100, align: 'center', sorttype: 'int'},
+            {name:'sex', width: 100, align: 'center', sorttype: 'string'},
+            {name:'badLuck', width: 150, align: 'center', sorttype: 'float'}
         ]
     };
-
-    vm.gridData = [
-        { id:"1", name:"test",note:"note",amount:"200.00",tax:"10.00",total:"210.00"},
-        { id:"2", name:"test2",note:"note2",amount:"300.00",tax:"20.00",total:"320.00"},
-        { id:"3", name:"test3",note:"note3",amount:"400.00",tax:"30.00",total:"430.00"},
-        { id:"4", name:"test",note:"note",amount:"200.00",tax:"10.00",total:"210.00"},
-        { id:"5", name:"test2",note:"note2",amount:"300.00",tax:"20.00",total:"320.00"},
-        { id:"6", name:"test3",note:"note3",amount:"400.00",tax:"30.00",total:"430.00"},
-        { id:"7", name:"test",note:"note",amount:"200.00",tax:"10.00",total:"210.00"},
-        { id:"8", name:"test2",note:"note2",amount:"300.00",tax:"20.00",total:"320.00"},
-        { id:"9", name:"test3",note:"note3",amount:"400.00",tax:"30.00",total:"430.00"}
-    ];
 
 }]);
