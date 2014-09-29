@@ -2,19 +2,10 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        concat: {
-            options: {
-                separator: ';'
-            },
-            dist: {
-                src: ['src/**/*.js'],
-                dest: 'dist/<%= pkg.name %>.js'
-            }
-        },
         jshint: {
             all: {
                 src: ['Gruntfile.js',
-                    'www/js/**/*.js'
+                    'app/js/**/*.js'
                 ],
                 options: {
                     bitwise: true,
@@ -30,9 +21,7 @@ module.exports = function(grunt) {
                     globals: {
                         jQuery: true,
                         angular: true,
-                        persistence: true,
-                        module: true,
-                        require: true
+                        module: true
                     }
                 }
             }
