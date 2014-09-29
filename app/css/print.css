@@ -1,0 +1,14 @@
+@media print {
+	ul.nav-tabs{
+		display: none !important;
+	}
+
+	.tab-content {
+		border: none !important;
+	}
+
+	tcd-jqgrid div.ui-jqgrid {
+		margin-top: -39px;
+
+	}
+}

@@ -1,6 +1,6 @@
 <tabset>
     <tab ng-repeat="tab in indMain.tabs">
-        <tab-heading>
+        <tab-heading class="hidden-print">
             <a ui-sref="{{ tab.sref }}" ui-sref-active="active">{{ tab.title }}</a>
         </tab-heading>
         <div class="container">

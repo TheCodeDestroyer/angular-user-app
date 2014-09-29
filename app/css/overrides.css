@@ -1,5 +1,8 @@
 .tab-content {
-	border-left: 1px solid #dddddd;
-	border-right: 1px solid #dddddd;
-	border-bottom: 1px solid #dddddd;
+	border: 1px solid #dddddd;
+	border-top: none;
+}
+
+div.ui-jqgrid-bdiv {
+	overflow: hidden !important;
 }
