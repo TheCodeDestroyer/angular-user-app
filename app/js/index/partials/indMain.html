@@ -1,18 +1,11 @@
 <tabset>
-    <tab>
+    <tab ng-repeat="tab in indMain.tabs">
         <tab-heading>
-            <a ui-sref="index.grid" ui-sref-active="active">Grid</a>
+            <a ui-sref="{{ tab.sref }}" ui-sref-active="active">{{ tab.title }}</a>
         </tab-heading>
-    </tab>
-    <tab>
-        <tab-heading>
-            <a ui-sref="index.chart" ui-sref-active="active">Chart</a>
-        </tab-heading>
+        <div class="container">
+            <br>
+            <ui-view/>
+        </div>
     </tab>
 </tabset>
-<div class="row">
-    <br>
-    <div ui-view>
-
-    </div>
-</div>
