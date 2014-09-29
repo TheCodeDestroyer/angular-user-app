@@ -6,8 +6,8 @@ angular.module('aua.controllers', []);
 
 angular.module('aua', [
     'ngCookies',
+    'ui.router',
     'pascalprecht.translate',
-    'ngStorage',
     'aua.filters',
     'aua.services',
     'aua.directives',
@@ -23,7 +23,7 @@ angular.module('aua', [
             suffix: '.json'
         });
 
-        $stateProvider.state('index', {url: '/', abstract: true, templateUrl: '', controller: 'indMainCtrl'});
+        $stateProvider.state('index', {url: '/', abstract: true, templateUrl: 'index/partials/indMain.html', controller: 'indMainCtrl'});
 
         $stateProvider.state('index.grid', {
             url: "/grid",
@@ -34,6 +34,6 @@ angular.module('aua', [
             templateUrl: 'index/partials/indChart.html'
         });
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/grid');
 
     }]);
