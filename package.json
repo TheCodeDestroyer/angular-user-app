@@ -1,0 +1,19 @@
+{
+  "name": "angular-user-app",
+  "version": "0.5.0",
+  "description": "User App written in AngularJS",
+  "main": " ",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheCodeDestroyer/angular-user-app.git"
+  },
+  "author": "TheCodeDestroyer <the.code.destroyer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheCodeDestroyer/angular-user-app/issues"
+  },
+  "homepage": "https://github.com/TheCodeDestroyer/angular-user-app"
+}
