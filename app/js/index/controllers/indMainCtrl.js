@@ -23,10 +23,10 @@ angular.module('aua.controllers').controller('indMainCtrl', ['$state', 'indUserS
         colModel:[
             {name:'id', width: 60, resizable: true, sorttype: 'int', hidden: true},
             {name:'name', width: 180, resizable: true, align: 'center'},
-            {name:'age', width: 50, resizable: true, align: 'center', sorttype: 'int'},
-            {name:'sex', width: 50, resizable: true, align: 'center', sorttype: 'string'},
-            {name:'badLuck', width: 60, resizable: true, align: 'center', sorttype: 'float'},
-            {name:'bestQuote', width: 300, resizable: true, align: 'center', sorttype: 'string'}
+            {name:'age', width: 60, resizable: true, align: 'center', sorttype: 'int'},
+            {name:'sex', width: 60, resizable: true, align: 'center', sorttype: 'string'},
+            {name:'badLuck', width: 100, resizable: true, align: 'center', sorttype: 'float'},
+            {name:'bestQuote', width: 290, resizable: true, align: 'center', sorttype: 'string'}
         ]
     };
 

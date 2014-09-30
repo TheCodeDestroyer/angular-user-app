@@ -36,3 +36,8 @@ div.ui-jqgrid-bdiv {
 	border: 1px solid #53acd5;
 	color: #fff;
 }
+
+.ui-jqgrid .ui-jqgrid-htable th {
+	height: 35px;
+	font-size: 14px;
+}

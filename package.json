@@ -4,7 +4,9 @@
   "description": "User App written in AngularJS",
   "main": " ",
   "scripts": {
-      "start": "node mockedServer.js"
+      "start": "node mockedServer.js",
+      "postinstall": "bower install",
+      "prestart": "npm install"
   },
   "repository": {
     "type": "git",

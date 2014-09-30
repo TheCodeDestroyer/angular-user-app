@@ -27,10 +27,16 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['Gruntfile.js',
-                'www/js/**/*.js'
-            ],
-            tasks: ['jshint']
+            scripts: {
+                files: ['Gruntfile.js',
+                    'www/js/**/*.js'
+                ],
+                tasks: ['jshint']
+            },
+            css: {
+                files: '**/*.sass',
+                tasks: ['sass']
+            }
         },
         ngannotate: {
             controllers: {
@@ -47,8 +53,9 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: {
-                    'app/css/bootstrap.css': 'app/lib/bootstrap-sass/lib/bootstrap.scss'
+                    'app/css/bootstrap.css': 'app/css/bootstrap/bootstrap.scss'
                 }
+
             }
         }
     });
