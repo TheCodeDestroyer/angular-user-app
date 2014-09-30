@@ -7,6 +7,7 @@ angular.module('aua.controllers', []);
 angular.module('aua', [
     'ngCookies',
     'ui.router',
+    'highcharts-ng',
     'ui.bootstrap',
     'aua.filters',
     'aua.services',
