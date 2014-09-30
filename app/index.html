@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="ng-app" ng-app="aua">
+<html id="ng-app" ng-app="aua" moznomarginboxes mozdisallowselectionprint>
     <head>
         <title>User App</title>
         <meta charset="utf-8" />
@@ -7,26 +7,31 @@
         <link href="lib/jqgrid/css/ui.jqgrid.css" type="text/css" rel="stylesheet">
         <link href="lib/jquery-ui/themes/cupertino/theme.css" type="text/css" rel="stylesheet">
         <link href="css/style.css" type="text/css" rel="stylesheet">
-        <link href="css/print.css" type="text/css" rel="stylesheet">
 
     </head>
-    <body ng-cloak>
+    <body ng-cloak ng-controller="indMetaCtrl as indMeta">
 
         <nav class="navbar navbar-default navbar-static-top">
             <a ui-sref="index.grid" class="navbar-brand span2">
-                <span class="resBlueColor">User</span> Application</a>
+                <span class="resBlueColor">User</span> Application
+            </a>
         </nav>
 
         <div class="container">
             <ui-view/>
         </div>
 
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container  text-right">
-                <br/>
-                <span class="label label-info">Copyright &copy; The Code Destroyer. 2014 • All rights reserved.</span>
-            </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom hidden-print">
+            <br/>
+            <span class="label label-info  pull-right marginRight20">Copyright &copy; The Code Destroyer. {{ indMeta.currentYear }} • All rights reserved.</span>
         </nav>
+
+        <div class="printFooter visible-print">
+            <div class="container">
+                <img id="printLogo" class="pull-left " src="img/logo.png"/>
+                <span id="printDate" class="pull-right ">{{ indMeta.currentDate | date : 'dd.MM.yyyy'}}</span>
+            </div>
+        </div>
 
         <!--ANGULAR-->
         <script src="lib/angular/angular.js"></script>
@@ -51,11 +56,10 @@
         <script src="js/app.js"></script>
         <!--CONTROLLERS-->
         <script src="js/index/controllers/indMainCtrl.js"></script>
+        <script src="js/index/controllers/indMetaCtrl.js"></script>
         <!--DIRECTIVES-->
         <script src="js/index/directives/tcdJqgrid.js"></script>
         <!--SERVICES-->
         <script src="js/index/services/indUserSvc.js"></script>
-        <!--CONSTANTS-->
-        <!--<script src="js/index/constants/placeholder.js"></script>-->
     </body>
 </html>

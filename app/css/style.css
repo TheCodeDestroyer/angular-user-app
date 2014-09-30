@@ -7,6 +7,12 @@
 	color: #2fbbdc;
 }
 
+/*positioning*/
+
+.marginRight20 {
+	margin-right: 20px;
+}
+
 /*OVERRIDES*/
 
 /*tabs*/
@@ -39,5 +45,46 @@ div.ui-jqgrid-bdiv {
 
 .ui-jqgrid .ui-jqgrid-htable th {
 	height: 35px;
-	font-size: 14px;
+	font-size: 13px;
+}
+
+/*print*/
+
+.printFooter {
+	border-top: 1px solid #ddd;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px; /* Height of the footer */
+}
+
+#printDate {
+	margin-top: 20px;
+}
+
+#printLogo {
+	margin-top: 10px;
+}
+
+@media print {
+
+	ul.nav-tabs{
+		display: none !important;
+	}
+
+	.tab-content {
+		border: none !important;
+	}
+
+	tcd-jqgrid div.ui-jqgrid {
+		margin-top: -39px;
+
+	}
+
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+		border-right: 1px solid #ddd !important;
+		border-bottom: none !important;
+	}
+
+
 }

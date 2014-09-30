@@ -51,7 +51,7 @@
   }
 
   @page {
-    margin: 2cm .5cm;
+    margin: 0;
   }
 
   p,
@@ -73,9 +73,6 @@
   }
 
   // Bootstrap components
-  .navbar {
-    display: none;
-  }
   .table {
     td,
     th {
