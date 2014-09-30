@@ -1,3 +1,38 @@
-.resBlueColor {
+
+/*GENERAL*/
+
+/*colors*/
+
+ .resBlueColor {
 	color: #2fbbdc;
+}
+
+/*OVERRIDES*/
+
+/*tabs*/
+.tab-content {
+	border: 1px solid #dddddd;
+	border-top: none;
+}
+
+/*grid*/
+
+div.ui-jqgrid-bdiv {
+	overflow: hidden !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: #53acd5;
+	color: #fff;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	background: #a5d3e9;
+	border: 1px solid #53acd5;
+	color: #fff;
 }

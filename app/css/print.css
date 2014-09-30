@@ -1,4 +1,10 @@
 @media print {
+
+	body {
+		margin: 0 !important;
+
+	}
+
 	ul.nav-tabs{
 		display: none !important;
 	}
@@ -12,3 +18,4 @@
 
 	}
 }
+
