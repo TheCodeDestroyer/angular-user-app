@@ -23,13 +23,14 @@
 
 /*grid*/
 
-div.ui-jqgrid-bdiv {
-	overflow: hidden !important;
+tcd-jqgrid div.ui-jqgrid {
+	border-radius: 0;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 	background: #53acd5;
 	color: #fff;
+	border-radius: 0;
 }
 
 .ui-state-hover,
@@ -52,22 +53,36 @@ div.ui-jqgrid-bdiv {
 
 .printFooter {
 	border-top: 1px solid #ddd;
-	position: fixed;
+	position: absolute;
+	display: block;
 	bottom: 0;
+	left:0;
 	width: 100%;
-	height: 50px; /* Height of the footer */
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	float: left;
 }
 
 #printDate {
 	margin-top: 20px;
+	margin-right: 10px;
 }
 
 #printLogo {
 	margin-top: 10px;
+	margin-left: 10px;
 }
 
 @media print {
 
+	
+	body, html {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+	
 	ul.nav-tabs{
 		display: none !important;
 	}
@@ -78,13 +93,32 @@ div.ui-jqgrid-bdiv {
 
 	tcd-jqgrid div.ui-jqgrid {
 		margin-top: -39px;
+		border-bottom: none;
+	}
 
+	div.ui-jqgrid-bdiv {
+		overflow: hidden !important;
+	}
+
+	.ui-jqgrid tr.jqgrow {
+		border-left: none;
+	}
+
+	.ui-state-hover,
+	.ui-widget-content .ui-state-hover,
+	.ui-widget-header .ui-state-hover,
+	.ui-state-focus,
+	.ui-widget-content .ui-state-focus,
+	.ui-widget-header .ui-state-focus {
+		border: 1px solid #ddd !important;
 	}
 
 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-		border-right: 1px solid #ddd !important;
+		border-right: 1px solid #ddd;
 		border-bottom: none !important;
 	}
 
-
+	.ui-jqgrid .ui-jqgrid-htable th:last-child {
+		border-right: none;
+	}
 }

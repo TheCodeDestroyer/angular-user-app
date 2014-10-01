@@ -12,6 +12,7 @@ angular.module('aua.controllers').controller('indMainCtrl', ['$state', 'indUserS
 
     vm.gridConfig = {
         datatype: 'local',
+//        height: 400,
         height: 'auto',
         rowList:[5,10,15],
         rowNum:15,
