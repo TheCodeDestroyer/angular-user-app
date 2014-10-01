@@ -75,12 +75,11 @@ angular.module('aua.controllers').controller('indMainCtrl', ['$state', 'indUserS
 
     vm.buildChart = function (chartType) {
         vm.highchartsConfig.series = [];
-//        vm.highchartsConfig.xAxis = { title: { text: 'Characters' } };
-        vm.highchartsConfig.xAxis = { categories: ['Characters'] } ;
+        vm.highchartsConfig.xAxis = { categories: ['Characters'] };
         vm.highchartsConfig.yAxis = { currentMin: 0 };
         var users = vm.gridData;
 
-        switch(chartType) {
+        switch (chartType) {
             case 0:
                 vm.highchartsConfig.title = { text: 'Bad luck chart' };
                 vm.highchartsConfig.yAxis.currentMax = 10000;
@@ -92,9 +91,9 @@ angular.module('aua.controllers').controller('indMainCtrl', ['$state', 'indUserS
                 vm.highchartsConfig.yAxis.title = { text: 'Age' };
         }
 
-        for (var i = 0; i < users.length; i++){
-            vm.highchartsConfig.series.push({ name: users[i].name,  data: [(chartType !== 0) ? users[i].age : users[i].badLuck ]});
+        for (var i = 0; i < users.length; i++) {
+            vm.highchartsConfig.series.push({ name: users[i].name, data: [(chartType !== 0) ? users[i].age : users[i].badLuck ]});
         }
-    }
+    };
 
 }]);

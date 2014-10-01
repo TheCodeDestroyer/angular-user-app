@@ -1,7 +1,4 @@
 angular.module('aua.directives').directive('tcdJqgrid', function () {
-    //Hacky, but too much effort would be need to find out why pager was being disabled
-    var firstLoad = false;
-
     return {
         restrict: 'E',
         scope: {
@@ -12,8 +9,7 @@ angular.module('aua.directives').directive('tcdJqgrid', function () {
             var table;
             var pager;
             scope.$watch('config', function (newValue, oldValue) {
-                if (newValue !== oldValue || !firstLoad) {
-                    firstLoad = true;
+                if (newValue !== oldValue || $('#grid').length === 0) {
                     element.children().empty();
                     table = angular.element('<table id="grid"></table>');
                     pager = angular.element('<div id="gridPager" class="hidden-print"></div>');
