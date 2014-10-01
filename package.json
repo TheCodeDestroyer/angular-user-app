@@ -1,12 +1,13 @@
 {
   "name": "angular-user-app",
   "version": "0.5.0",
-  "description": "User App written in AngularJS",
+  "description": "South Park Character Info written in AngularJS",
   "main": " ",
   "scripts": {
     "postinstall": "node mockedServer.js",
     "install": "bower install",
-    "start": "http-server app/"
+    "start": "http-server app/",
+    "prestart": "grunt build"
   },
   "repository": {
     "type": "git",

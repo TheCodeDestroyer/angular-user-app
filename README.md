@@ -1,7 +1,7 @@
-User app
+South Park Character Info
 ================
 
-User App written in AngularJS
+South Park Character Info written in AngularJS
 
 ## Getting started
 

@@ -1,10 +1,10 @@
 
-angular.module('aua.filters', []);
-angular.module('aua.services', []);
-angular.module('aua.directives', []);
-angular.module('aua.controllers', []);
+angular.module('spci.filters', []);
+angular.module('spci.services', []);
+angular.module('spci.directives', []);
+angular.module('spci.controllers', []);
 
-angular.module('aua', [
+angular.module('spci', [
     'ngCookies',
     'ui.router',
     'highcharts-ng',

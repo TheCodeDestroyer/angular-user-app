@@ -36,4 +36,5 @@ com_crashlytics_export_strings.xml
 
 # Other
 lib/
+app/js/build/
 app/css/bootstrap.css

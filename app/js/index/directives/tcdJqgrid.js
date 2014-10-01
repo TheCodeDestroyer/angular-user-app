@@ -1,4 +1,4 @@
-angular.module('aua.directives').directive('tcdJqgrid', function () {
+angular.module('spci.directives').directive('tcdJqgrid', function () {
     return {
         restrict: 'E',
         scope: {

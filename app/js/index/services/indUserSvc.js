@@ -1,4 +1,4 @@
-angular.module('aua.services').factory('indUserSvc', ['$http', function($http){
+angular.module('spci.services').factory('indUserSvc', ['$http', function($http){
 
     function getUsers() {
 

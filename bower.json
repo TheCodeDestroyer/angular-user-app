@@ -5,7 +5,7 @@
   "authors": [
     "TheCodeDestroyer <the.code.destroyer@gmail.com>"
   ],
-  "description": "User App written in AngularJS",
+  "description": "South Park Character Info written in AngularJS",
   "license": "MIT",
   "private": true,
   "ignore": [

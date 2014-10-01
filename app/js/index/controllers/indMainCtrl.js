@@ -1,4 +1,4 @@
-angular.module('aua.controllers').controller('indMainCtrl', ['$state', 'indUserSvc', function($state, indUserSvc) {
+angular.module('spci.controllers').controller('indMainCtrl', ['$state', 'indUserSvc', function($state, indUserSvc) {
     'use strict';
 
     var vm = this;

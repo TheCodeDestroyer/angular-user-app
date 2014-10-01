@@ -1,4 +1,4 @@
-angular.module('aua.controllers').controller('indMetaCtrl', ['$state', 'indUserSvc', function($state, indUserSvc) {
+angular.module('spci.controllers').controller('indMetaCtrl', [function() {
     'use strict';
 
     var vm = this;

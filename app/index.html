@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="ng-app" ng-app="aua" moznomarginboxes mozdisallowselectionprint>
     <head>
-        <title>User App</title>
+        <title>South Park Character Info</title>
         <meta charset="utf-8" />
         <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
         <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
@@ -14,7 +14,7 @@
 
         <nav class="navbar navbar-default navbar-static-top">
             <a ui-sref="index.grid" class="navbar-brand span2">
-                <span class="resBlueColor">User</span> Application
+                <span class="resBlueColor">South Park</span> Character Info
             </a>
         </nav>
 
@@ -32,33 +32,41 @@
             <span id="printDate" class="pull-right">{{ indMeta.currentDate | date : 'dd.MM.yyyy'}}</span>
         </div>
 
-        <!--ANGULAR-->
-        <script src="lib/angular/angular.js"></script>
-        <script src="lib/ui-router/release/angular-ui-router.js"></script>
-        <script src="lib/angular-cookies/angular-cookies.js"></script>
-        <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
-        <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <!--PRODUCTION-->
 
-        <!--JQUERY-->
-        <script src="lib/jquery/dist/jquery.js"></script>
-        <script src="lib/jquery-ui/jquery-ui.js"></script>
+        <script src="js/build/vendorBundle.min.js"></script>
+        <script src="js/build/appBundle.min.js"></script>
 
-        <!--HIGHCHARTS-->
-        <script src="lib/highcharts/highcharts.js"></script>
-        <script src="lib/highcharts-ng/dist/highcharts-ng.js"></script>
 
-        <!--JQGRID-->
-        <script src="lib/jqgrid/js/i18n/grid.locale-en.js"></script>
-        <script src="lib/jqgrid/js/jquery.jqGrid.js"></script>
+        <!--DEV-->
+
+        <!--&lt;!&ndash;ANGULAR&ndash;&gt;-->
+        <!--<script src="lib/angular/angular.js"></script>-->
+        <!--<script src="lib/ui-router/release/angular-ui-router.js"></script>-->
+        <!--<script src="lib/angular-cookies/angular-cookies.js"></script>-->
+        <!--<script src="lib/angular-bootstrap/ui-bootstrap.js"></script>-->
+        <!--<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+
+        <!--&lt;!&ndash;JQUERY&ndash;&gt;-->
+        <!--<script src="lib/jquery/dist/jquery.js"></script>-->
+        <!--<script src="lib/jquery-ui/jquery-ui.js"></script>-->
+
+        <!--&lt;!&ndash;HIGHCHARTS&ndash;&gt;-->
+        <!--<script src="lib/highcharts/highcharts.js"></script>-->
+        <!--<script src="lib/highcharts-ng/dist/highcharts-ng.js"></script>-->
+
+        <!--&lt;!&ndash;JQGRID&ndash;&gt;-->
+        <!--<script src="lib/jqgrid/js/i18n/grid.locale-en.js"></script>-->
+        <!--<script src="lib/jqgrid/js/jquery.jqGrid.js"></script>-->
 
         <!--APP-->
-        <script src="js/app.js"></script>
-        <!--CONTROLLERS-->
-        <script src="js/index/controllers/indMainCtrl.js"></script>
-        <script src="js/index/controllers/indMetaCtrl.js"></script>
-        <!--DIRECTIVES-->
-        <script src="js/index/directives/tcdJqgrid.js"></script>
-        <!--SERVICES-->
-        <script src="js/index/services/indUserSvc.js"></script>
+        <!--<script src="js/app.js"></script>-->
+        <!--&lt;!&ndash;CONTROLLERS&ndash;&gt;-->
+        <!--<script src="js/index/controllers/indMainCtrl.js"></script>-->
+        <!--<script src="js/index/controllers/indMetaCtrl.js"></script>-->
+        <!--&lt;!&ndash;DIRECTIVES&ndash;&gt;-->
+        <!--<script src="js/index/directives/tcdJqgrid.js"></script>-->
+        <!--&lt;!&ndash;SERVICES&ndash;&gt;-->
+        <!--<script src="js/index/services/indUserSvc.js"></script>-->
     </body>
 </html>

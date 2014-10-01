@@ -21,6 +21,7 @@ module.exports = function(grunt) {
                     globals: {
                         jQuery: true,
                         angular: true,
+                        $: true,
                         module: true
                     }
                 }
@@ -38,16 +39,29 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             }
         },
-        ngannotate: {
-            controllers: {
-                src: ['test/src/controllers/one.js'],
-                dest: 'test/generated/controllers/one.js'
+        uglify: {
+            app: {
+                files: {
+                    'app/js/build/appBundle.min.js': ['app/js/**/**.js', '!app/js/build/**.js']
+
+                }
             },
-            directives: {
-                expand: true,
-                cwd: 'test/src',
-                src: ['directives/**/*.js'],
-                dest: 'test/generated'
+            vendor: {
+                files: {
+                    'app/js/build/vendorBundle.min.js': [
+                        'app/lib/angular/angular.js',
+                        'app/lib/ui-router/release/angular-ui-router.js',
+                        'app/lib/angular-cookies/angular-cookies.js',
+                        'app/lib/angular-bootstrap/ui-bootstrap.js',
+                        'app/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+                        'app/lib/jquery/dist/jquery.js',
+                        'app/lib/jquery-ui/jquery-ui.js',
+                        'app/lib/highcharts/highcharts.js',
+                        'app/lib/highcharts-ng/dist/highcharts-ng.js',
+                        'app/lib/jqgrid/js/i18n/grid.locale-en.js',
+                        'app/lib/jqgrid/js/jquery.jqGrid.js'
+                    ]
+                }
             }
         },
         sass: {
@@ -64,6 +78,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-ng-annotate');
+
+    grunt.registerTask('build', ['sass', 'uglify']);
 
 };
