@@ -19,7 +19,6 @@
     "angular": "~1.2.25",
     "jqgrid": "~4.6.0",
     "ui-router": "~0.2.11",
-    "angular-cookies": "~1.2.25",
     "angular-bootstrap": "~0.11.2",
     "jquery": "~2.1.1",
     "jquery-ui": "~1.11.1",
