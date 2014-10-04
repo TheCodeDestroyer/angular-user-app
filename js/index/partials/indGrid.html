@@ -1,9 +1,22 @@
 <div class="hidden-print">
     <div class="btn-group">
         <button type="button" class="btn btn-default" ng-click="indMain.randomizeData(15)">Random</button>
+        <button type="button" class="btn btn-default" ng-click="indMain.printOptionsDialog()">Print options</button>
         <button type="button" class="btn btn-default" ng-click="indMain.printData()">Print data</button>
     </div>
 </div>
-<br/>
-<tcd-jqgrid config="indMain.gridConfig" data="indMain.gridData"></tcd-jqgrid>
-<br/>
+<div id="contentContainer">
+    <div class="row gridContainer">
+        <br/>
+        <br/>
+        <br/>
+        <tcd-jqgrid config="indMain.gridConfig" data="indMain.gridData"></tcd-jqgrid>
+        <br/>
+    </div>
+
+    <!--TODO: Very bad solution for newly added functionality of showing charts on the print-->
+    <div id="chartContainer" class="row visible-print">
+        <highchart class="pull-left" ng-show="indMain.showAgeChartInPrint" config="indMain.ageChartConfig"></highchart>
+        <highchart class="pull-left" ng-show="indMain.showBadLuckChartInPrint" config="indMain.badLuckChartConfig"></highchart>
+    </div>
+</div>
